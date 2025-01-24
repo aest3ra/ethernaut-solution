@@ -5,7 +5,7 @@ import "../src/CoinFlip.sol";
 import "forge-std/Script.sol";
 import "forge-std/console.sol";
 
-contract Player {
+contract Instance {
     uint256 constant FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968;
 
     constructor(CoinFlip _coinFlipInstance) {
@@ -18,11 +18,11 @@ contract Player {
 
 contract CoinFlipSolution is Script {
 
-    CoinFlip public coinflipInstance = CoinFlip(0x020cbfd877314083574EDAb8633a53E9AB8A390F);
+    CoinFlip public coinflipInstance = CoinFlip(0x1491BF9a78Ae3f2096214cdc7b413F3689973D00);
 
     function run() external {
         vm.startBroadcast(vm.envUint("PRIVATE_KEY"));
-        new Player(coinflipInstance);
+        new Instance(coinflipInstance);
         console.log("consecutiveWins: ", coinflipInstance.consecutiveWins());
         vm.stopBroadcast();
     }
