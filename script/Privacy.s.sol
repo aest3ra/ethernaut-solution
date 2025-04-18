@@ -7,7 +7,7 @@ import "forge-std/console.sol";
 
 contract PrivacySolution is Script {
 
-    address target = 0xCC93c7377c86939384cD99D5A93e3C9Bc4548298;
+    address target = 0x1502Bb81a358ba9d3Fc3f586003426E6338B0802;
     Privacy privacy = Privacy(target);
     function run() external {
         vm.startBroadcast(vm.envUint("PRIVATE_KEY"));
@@ -19,7 +19,7 @@ contract PrivacySolution is Script {
     }
 }
 
-// cast storage 0xCC93c7377c86939384cD99D5A93e3C9Bc4548298 5
+// cast storage 0x1502Bb81a358ba9d3Fc3f586003426E6338B0802 5
 // 0x61fbc9d658ffc07d52c74b8b2ee734663d8254941569788583e82cc6bbd0e20f
 
 // python -c 'data="61fbc9d658ffc07d52c74b8b2ee734663d8254941569788583e82cc6bbd0e20f"; print(data[:32])'
